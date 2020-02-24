@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style>
+      h1#foo {
+        font-family: monospace;
+        font-size: 1.5em;
+        font-weight: normal;
+      }
+
+      h1#foo::after {
+        content: " ";
+        border-right: 1px solid black;
+        margin-left: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="foo"></h1>
+
+    <script type="text/javascript" src="../dist/autowriter.min.js"></script>
+    <script type="text/javascript">
+      const root = document.getElementById('foo');
+      const writer = new Autowriter(root);
+
+      writer
+        .write('Hello, world!')
+        .pause(1500)
+        .clear()
+        .pause(1500)
+        .write('Bye')
+        .run()
+        .then(() => console.log('Done!'));
+    </script>
+  </body>
+</html>
