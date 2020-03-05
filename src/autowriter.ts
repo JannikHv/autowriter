@@ -10,10 +10,11 @@ export class Autowriter {
   }
 
   private setText(text: string) {
-    this.root.innerHTML = text
-      .split('')
-      .map((letter: string) => (letter === ' ') ? '&nbsp;' : letter)
-      .join('');
+    if (text.slice(-1) === ' ') {
+      this.root.innerHTML = text.slice(0, -1) + '&nbsp;';
+    } else {
+      this.root.textContent = text.replace(/\u00a0/g, ' ');
+    }
   }
 
   private appendLetter(letter: string) {

@@ -1,3 +1,3 @@
 import { Autowriter } from './autowriter';
 
-export { Autowriter};
+export { Autowriter };
