@@ -22,7 +22,7 @@
   "devDependencies": {
     "awesome-typescript-loader": "^5.2.1",
     "css-loader": "^3.4.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^8.0.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.1.2",
     "typescript": "^3.7.4",
